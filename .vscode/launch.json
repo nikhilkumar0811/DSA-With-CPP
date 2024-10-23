@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/LENOVO/Desktop/pract2/.vscode",
-      "program": "c:/Users/LENOVO/Desktop/pract2/.vscode/build/Debug/outDebug",
+      "cwd": "c:/Users/LENOVO/Desktop/pract2",
+      "program": "c:/Users/LENOVO/Desktop/pract2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

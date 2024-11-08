@@ -18,15 +18,16 @@ bool primecheck(int n)
 int main()
 {
     int n;
-    cout << "enter rthe the number";
+    cout << "enter the num:" << endl;
     cin >> n;
+
     if (primecheck(n))
     {
-        cout << n << "the number is prime";
+        cout << "the num is prime number:";
     }
     else
     {
-        cout << n << "the number is not prime";
+        cout << "the num is not prime number:";
     }
     return 0;
 }

@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool palincheck(char ch[], int n)
+bool palindrome(char ch[], int n)
 {
-    int s = 0;
-    int e = n - 1;
-
+    int s = 0, e = n - 1;
     while (s <= e)
     {
         if (ch[s] != ch[e])
@@ -16,23 +14,22 @@ bool palincheck(char ch[], int n)
             s++;
             e--;
         }
-        return 1;
     }
+    return 1;
 }
 int main()
 {
     char ch[20];
-    cout << "enter the name you have to check:" << endl;
-    cin >> ch;
-    int length = strlen(ch);
-
-    if (palincheck(ch, length))
+    int n;
+    cout << "enter the name you want to check it is palidrome or not: " << endl;
+    cin >> n;
+    if (palindrome(ch, n))
     {
-        cout << "it is palindrome. " << endl;
+        cout << "the given name is palindrome" << endl;
     }
     else
     {
-        cout << "it is not palindrome." << endl;
+        cout << "the given name is not palindrome" << endl;
     }
     return 0;
 }

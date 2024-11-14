@@ -1,24 +1,30 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-    int num, digit, rev = 0;
-    cout << "enter the number you want to check palindrome or not" << endl;
-    cin >> num;
-    int originalnum = num;
+    int n, digit, rev = 0;
+    cout << "Enter the number you want to check for palindrome or not:" << endl;
+    cin >> n;
+
+    int num = n;           // Assign n to num to use it for manipulation
+    int originalnum = num; // Store the original number for comparison
+
     while (num != 0)
     {
-        digit = num % 10; 
-        rev = (rev * 10) + digit;
-        num = num / 10;
+        digit = num % 10;         // Get the last digit
+        rev = (rev * 10) + digit; // Build the reverse of the number
+        num = num / 10;           // Remove the last digit from num
     }
+
     if (rev == originalnum)
     {
-        cout << "the number is palindrome";
+        cout << "The given number is a palindrome." << endl;
     }
     else
     {
-        cout << "the number is not palindrome";
+        cout << "The given number is not a palindrome." << endl;
     }
+
     return 0;
 }

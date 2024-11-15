@@ -1,6 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
 struct TreeNode
 {
     int val;
@@ -9,32 +8,27 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-// Function to find the LCA of two nodes in a BST
 TreeNode *findLCA(TreeNode *root, int p, int q)
 {
-    if (!root)
-        return nullptr; // If the root is null, there's no LCA
-
-    // If both nodes are smaller than the root, LCA must be in the left subtree
-    if (p < root->val && q < root->val)
+    if (root == NULL)
+    {
+        return NULL;
+    }
+    if (p > root->val && q < root->val)
     {
         return findLCA(root->left, p, q);
     }
-    // If both nodes are greater than the root, LCA must be in the right subtree
     else if (p > root->val && q > root->val)
     {
         return findLCA(root->right, p, q);
     }
-    // Otherwise, root is the LCA
     else
     {
         return root;
     }
 }
-
 int main()
 {
-    // Creating a simple BST
     TreeNode *root = new TreeNode(6);
     root->left = new TreeNode(2);
     root->right = new TreeNode(8);
@@ -50,12 +44,11 @@ int main()
 
     if (lca)
     {
-        cout << "The LCA of " << p << " and " << q << " is " << lca->val << "." << endl;
+        cout << "The LCA of" << p << "and" << "q" << lca->val << " " << endl;
     }
     else
     {
         cout << "LCA does not exist in the tree." << endl;
     }
-
     return 0;
 }

@@ -1,39 +1,33 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
+
+int sumOfDigits(int num)
+{
+    int sum = 0;
+    while (num > 0)
+    {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
 
 int main()
 {
     int n;
-    int sqr = n * n;
     cout << "Enter the number: ";
     cin >> n;
 
-    int s = 0;
-    int e = n - 1; // Initialize e as n - 1 for a broader range
+    int sqr = n * n;
+    int digitSum = sumOfDigits(sqr);
 
-    bool found = false;
-    while (s <= e)
+    if (digitSum == n)
     {
-        int sum = s + e;
-        if (sum == n)
-        {
-            cout << "MAGIC " << s << " + " << e << " = " << n << endl;
-            found = true;
-            break;
-        }
-        else if (sum < n)
-        {
-            s++;
-        }
-        else
-        {
-            e--;
-        }
+        cout << "MAGIC: The square of " << n << " is " << sqr << ", and the sum of its digits is " << digitSum << " which equals " << n << "." << endl;
     }
-
-    if (!found)
+    else
     {
-        cout << "No Magic " << n << endl;
+        cout << "No Magic: The square of " << n << " is " << sqr << ", and the sum of its digits is " << digitSum << " which does not equal " << n << "." << endl;
     }
 
     return 0;

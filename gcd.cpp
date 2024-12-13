@@ -26,9 +26,8 @@ int gcd(int a, int b)
 int main()
 {
     int a, b;
-    cout << "Enter the a and b" << endl;
-    cin >> a >> b;
-
+    cout << "ENter the a and b";
+    cin >> a, b;
     int ans = gcd(a, b);
-    cout << "The given number is " << a << b << "And the gcd of that is " << ans << endl;
+    cout << "the gcd of the a,b is:" << a << b << ans;
 }

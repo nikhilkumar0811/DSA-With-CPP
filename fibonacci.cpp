@@ -1,39 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-void fibonacci(int n)
+int fibonacci(int n)
 {
-    int a = 0, b = 1; // Fibonacci starts with 0 and 1
-
+    int a = 0, b = 1;
     if (n >= 1)
     {
-        cout << a << " "; // Print the first term
+        cout << a << endl;
     }
-    if (n >= 2)
+    else if (n >= 2)
     {
-        cout << b << " "; // Print the second term
+        cout << b << endl;
     }
-
-    // Print the next terms of the Fibonacci sequence
     for (int i = 3; i <= n; i++)
     {
-        int next = a + b;    // Calculate the next term
-        cout << next << " "; // Print the next term
-        a = b;               // Update a and b for the next iteration
+        int next = a + b;
+        cout << next << "";
+        a = b;
         b = next;
     }
 }
-
 int main()
 {
     int n;
-
-    // Input the number of Fibonacci terms to print
-    cout << "Enter the number of terms: ";
+    cout << "enter the number of terms:";
     cin >> n;
-
-    // Print the Fibonacci sequence
     fibonacci(n);
-
     return 0;
 }

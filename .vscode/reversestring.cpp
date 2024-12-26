@@ -1,29 +1,21 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
-
-string reverseInPairs(const string &str)
+string reversestring(vector<string> &str)
 {
-    string result = str;
-
-    // Loop through the string, swapping characters in pairs
-    for (size_t i = 0; i < str.length(); i += 2)
+    for (int i = 0; i < str.size() / 2; i++)
     {
-        // Check if there is a valid pair to swap
-        if (i + 1 < str.length())
-        {
-            swap(result[i], result[i + 1]);
-        }
+        swap(str[i], str[str.size() - i - 1]);
     }
-
-    return result;
 }
 
 int main()
 {
-    string input = "abcdef";
-    string reversed = reverseInPairs(input);
-    cout << "Reversed in pairs: " << reversed << endl; // Output: "badcfe"
-
+    vector<string> str = {"h", "e", "l", "l", "o"};
+    reversestring(str);
+    for (int i = 0; i < str.size(); i++)
+    {
+        cout << str[i];
+    }
+    cout << endl;
     return 0;
 }

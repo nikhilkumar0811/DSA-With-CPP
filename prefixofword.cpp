@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
 string reversePrefix(string word, char ch)
